@@ -238,10 +238,16 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Soyez alertés quand le service ouvre ses portes !</h2>
-                <form method="POST" class="post-form">{% csrf_token %}
+                <form method="POST" style="float : left" class="post-form">{% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="save btn btn-default">Tenez-moi au courant!</button>
+                    <button type="submit" name="userbutton" class="save btn btn-default">Je suis intéressé (demande)!</button>
                 </form>
+                
+                <form method="POST" style="float : right" class="post-form">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" name="offerbutton" class="save btn btn-default">Je suis intéressé (offre)!</button>
+                </form>
+                
             </div>
         </div>
     </aside>

@@ -10,9 +10,14 @@ def index(request):
      if request.method == "POST":
          form = MailForm(request.POST)
          if form.is_valid():
-             mail = form.save(commit=False)
-             mail.save()
-             return redirect('/', pk=mail.pk)
+            mail = form.save(commit=False)
+            if 'userbutton' in request.POST:
+                mail.address = "user-" + mail.address
+            elif 'offerbutton' in request.POST:
+                mail.address = "offer-" + mail.address
+ 
+            mail.save()
+            return redirect('/', pk=mail.pk)
          else:
             form=MailForm()
      else:
