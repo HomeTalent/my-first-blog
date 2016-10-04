@@ -17,3 +17,14 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Mail(models.Model):
+    address = models.CharField(max_length=70)
+    created_date = models.DateTimeField(
+            default=timezone.now)
+
+    def publish(self):
+        self.save()
+
+    def __str__(self):
+        return self.address
