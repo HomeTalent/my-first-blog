@@ -1,0 +1,8 @@
+Options +Indexes +FollowSymlinks
+AddHandler fcgid-script .fcgi
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^static/ - [L,NC]
+RewriteCond %{REQUEST_FILENAME} !(cgi-bin/main.fcgi)
+RewriteRule ^(.*)$ cgi-bin/main.fcgi/$1 [QSA,L]
