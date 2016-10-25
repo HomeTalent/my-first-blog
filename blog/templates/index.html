@@ -274,13 +274,13 @@
             <div class="call-to-action">
                 <h2>Soyez les premiers à recevoir un message quand cette plateforme ouvrira !</h2>
                 <form method="POST" style="float : left" class="post-form">{% csrf_token %}
-                    <h3>CE SERVICE M'INTÉRESSE (DEMANDE) !</h3>
+                    <h3>Ce service m'intéresse (demande) !</h3>
                     {{ form.as_p }}
                     <button type="submit" name="userbutton" class="save btn btn-default">J'AI BESOIN D'AIDE !</button>
                 </form>
                 
                 <form method="POST" style="float : right" class="post-form">{% csrf_token %}
-                    <h3>CE SERVICE M'INTÉRESSE (OFFRE) !</h3>
+                    <h3>Ce service m'intéresse (offre) !</h3>
                     {{ form.as_p }}
                     <button type="submit" name="offerbutton" class="save btn btn-default">JE PROPOSE MES SERVICES !</button>
                 </form>

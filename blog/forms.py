@@ -14,3 +14,9 @@ class MailForm(forms.ModelForm):
     class Meta:
         model = Mail
         fields = ('address',)
+        labels = {
+            'addresse': '',
+        }
+        help_texts = {
+            'name': _('adresse email'),
+        }
