@@ -19,7 +19,7 @@ class Post(models.Model):
         return self.title
 
 class Mail(models.Model):
-    address = models.EmailField
+    address = models.EmailField()
     created_date = models.DateTimeField(
             default=timezone.now)
 

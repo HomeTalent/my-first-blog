@@ -2,6 +2,11 @@ version: "2"
 services:
  db:
    image: mysql
+   environment:
+     - MYSQL_ROOT_PASSWORD=rootPassw0rd
+     - MYSQL_DATABASE
+     - MYSQL_USER
+     - MYSQL_PASSWORD
  web:
    build: .
    command: python manage.py runserver 0.0.0.0:1337
@@ -9,5 +14,7 @@ services:
      - .:/app
    ports:
      - "1337:1337"
+   links:
+     - db:db653674001.db.1and1.com
    depends_on:
      - db

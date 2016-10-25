@@ -14,9 +14,9 @@ class MailForm(forms.ModelForm):
     class Meta:
         model = Mail
         fields = ('address',)
-        labels = {
-            'addresse': '',
+        widgets = {
+            'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
         }
-        help_texts = {
-            'name': _('adresse email'),
+        labels = {
+            'address': '',
         }
