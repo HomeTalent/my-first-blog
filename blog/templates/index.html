@@ -33,7 +33,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style>
+        .services-list li {
+            list-style: none;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -73,10 +77,10 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading"><span style="background-color:rgba(0,0,0,.75);">Besoin d'aide pour laver votre linge?</span></h1>
+                <h1 id="homeHeading"><span style="background-color:rgba(0,0,0,.75);">Besoin d'un coup de main?</span></h1>
                 <hr>
-                <p><span style="background-color:rgba(0,0,0,.75);">Grâce à XXXXXX trouvez en quelques clics une personne de confiance proche de vous pour vous aider</span></p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Découvrez</a>
+                <p><span style="background-color:rgba(0,0,0,.75);">XXXXX vous aide à trouver en quelques clics une personne fiable et compétente près de chez vous.</span></p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Découvrez le concept</a>
             </div>
         </div>
     </header>
@@ -85,9 +89,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">L'outil qu'il vous faut!</h2>
+                    <h2 class="section-heading">Cette plateforme est à votre service !</h2>
                     <hr class="light">
-                    <p class="text-faded">Vous avez besoin de quelqu'un pour faire le ménage chez vous? vous ne savez pas changer l'huile de votre voiture et les prix des garages sont exorbitants? Vous avez un robinet qui fuit mais aucun plombier n'est disponible? Vous avez besoin d'aide pour descendre un meuble à la cave? Trouvez la personne qu'il vous faut sur XXXXXXX! </p>
+                    <p class="text-faded">Vous avez besoin de quelqu'un pour faire le ménage ? Vous avez besoin de monter un meuble Ikea? Vous ne savez pas changer l'huile de votre voiture, mais ne souhaitez pas vous rendre dans un garage ? Vous avez un robinet qui fuit, mais aucun plombier n'est disponible ? Vous avez besoin d'aide pour descendre un meuble à la cave ? Trouvez la personne qu'il vous faut sur XXXXX ! </p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Commencez!</a>
                 </div>
             </div>
@@ -98,7 +102,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">A Votre Service</h2>
+                    <h2 class="section-heading">Vos avantages</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -108,29 +112,29 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Rareté</h3>
-                        <p class="text-muted">Trouvez LA personne qu'il vous faut, compétente, honnête et au tarif raisonnable.</p>
+                        <h3>Qualité</h3>
+                        <p class="text-muted">Trouvez LA personne qu'il vous faut, compétente, honnête et à un tarif raisonnable.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-clock-o text-primary sr-icons"></i>
+                        <h3>Flexibilité</h3>
+                        <p class="text-muted">Vous pouvez demander de l'aide pour 15 minutes ou pour toute une journée.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Flexibilité</h3>
-                        <p class="text-muted">Vous pouvez demander de l'aide pour 15mn ou pour toute une journée.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Actualité</h3>
+                        <h3>Rapidité</h3>
                         <p class="text-muted">Voyez en temps réel qui est disponible et où.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Amitié</h3>
-                        <p class="text-muted">Rencontrez des gens, échangez des services et faites de nouveaux amis.</p>
+                        <i class="fa fa-4x fa-handshake-o text-primary sr-icons"></i>
+                        <h3>Proximité</h3>
+                        <p class="text-muted">Echangez des services avec des personnes proches de chez vous.</p>
                     </div>
                 </div>
             </div>
@@ -138,9 +142,40 @@
     </section>
 
     <section class="no-padding" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Tous les services</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-4 col-sm-6 text-center">
+                    <ul class="services-list">
+                        <li>Bricolage</li>
+                        <li>Jardinage</li>
+                        <li>Demenagement</li>
+                        <li>Menage/Repassage</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center">
+                    <ul class="services-list">
+                        <li>Assemblage meuble</li>
+                        <li>Informatique</li>
+                        <li>Rammassage et livraison </li>
+                        <li>Animaux</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center">
+                    <ul class="services-list">
+                        <li>Evenementiel</li> 
+                        <li>Prestations Administratif</li>
+                        <li>Service à la personne</li>
+                    </ul>
+                </div>
+                <!--<div class="col-lg-4 col-sm-6">
                     <a href="../static/img/portfolio/fullsize/building.jpg" class="portfolio-box">
                         <img src="../static/img/portfolio/thumbnails/building.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -229,7 +264,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
@@ -237,15 +272,17 @@
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Soyez alertés quand le service ouvre ses portes !</h2>
+                <h2>Soyez les premiers à recevoir un message quand cette plateforme ouvrira !</h2>
                 <form method="POST" style="float : left" class="post-form">{% csrf_token %}
+                    <h3>CE SERVICE M'INTÉRESSE (DEMANDE) !</h3>
                     {{ form.as_p }}
-                    <button type="submit" name="userbutton" class="save btn btn-default">Je suis intéressé (demande)!</button>
+                    <button type="submit" name="userbutton" class="save btn btn-default">J'AI BESOIN D'AIDE !</button>
                 </form>
                 
                 <form method="POST" style="float : right" class="post-form">{% csrf_token %}
+                    <h3>CE SERVICE M'INTÉRESSE (OFFRE) !</h3>
                     {{ form.as_p }}
-                    <button type="submit" name="offerbutton" class="save btn btn-default">Je suis intéressé (offre)!</button>
+                    <button type="submit" name="offerbutton" class="save btn btn-default">JE PROPOSE MES SERVICES !</button>
                 </form>
                 
             </div>
@@ -258,7 +295,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Contactez nous!</h2>
                     <hr class="primary">
-                    <p>Un avis? Des questions? Un commentaire? Nous sommes à votre écoute.</p>
+                    <p>Un avis ? Des questions ? Un commentaire ? Nous sommes à votre écoute.</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
