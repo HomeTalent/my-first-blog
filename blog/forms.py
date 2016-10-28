@@ -13,7 +13,7 @@ class MailForm(forms.ModelForm):
 
     class Meta:
         model = Mail
-        fields = ('address',)
+        fields = ('address','service')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
         }
