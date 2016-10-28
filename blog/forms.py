@@ -19,4 +19,5 @@ class MailForm(forms.ModelForm):
         }
         labels = {
             'address': '',
+            'service': 'Quel est le service dont vous avez le plus besoin ? (facultatif)'
         }
