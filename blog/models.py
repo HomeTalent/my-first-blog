@@ -21,16 +21,16 @@ class Post(models.Model):
 class Mail(models.Model):
     SERVICES_CHOICES = (
         ('bricolage', 'Bricolage'),
-        ('jardinage', Jardinage),
-        ('demenagement', Demenagement),
-        ('menage-repassage', Menage/Repassage),
-        ('assemblage-meuble', Assemblage meuble),
-        ('informatique', Informatique),
-        ('ramassage-livraison', Rammassage et livraison),
-        ('animaux', Animaux),
-        ('evenementiel', Evenementiel),
-        ('prestation-administratif', Prestations Administratif),
-        ('service-personne', Service à la personne),
+        ('jardinage', 'Jardinage'),
+        ('demenagement', 'Demenagement'),
+        ('menage-repassage', 'Menage/Repassage'),
+        ('assemblage-meuble', 'Assemblage meuble'),
+        ('informatique', 'Informatique'),
+        ('ramassage-livraison', 'Rammassage et livraison'),
+        ('animaux', 'Animaux'),
+        ('evenementiel', 'Evenementiel'),
+        ('prestation-administratif', 'Prestations Administratif'),
+        ('service-personne', 'Service à la personne'),
     )
     
     address = models.EmailField()
