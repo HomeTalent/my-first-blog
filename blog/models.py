@@ -30,7 +30,7 @@ class Mail(models.Model):
         ('animaux', 'Animaux'),
         ('evenementiel', 'Evenementiel'),
         ('prestation-administratif', 'Prestations Administratif'),
-        ('service-personne', 'Service à la personne'),
+        ('service-personne', 'Service à la personne')
     )
     
     address = models.EmailField()
