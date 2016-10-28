@@ -35,7 +35,7 @@ class Mail(models.Model):
     
     address = models.EmailField()
     service = models.CharField(
-        maxlength=254
+        maxlength=254,
         choices=SERVICES_CHOICES
     )
     created_date = models.DateTimeField(
