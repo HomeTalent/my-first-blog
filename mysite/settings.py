@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': os.environ.get('MYSQL_DATABASE', ''),
         'USER': os.environ.get('MYSQL_USER', ''),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD', ''),
-        'HOST': 'db653674001.db.1and1.com',   # Or an IP Address that your DB is hosted on
+        'HOST': 'nrin.myd.infomaniak.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
