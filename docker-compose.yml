@@ -15,7 +15,7 @@ services:
    ports:
      - "1337:1337"
    links:
-     - db:db653674001.db.1and1.com
+     - db:nrin.myd.infomaniak.com
    depends_on:
      - db
    environment:

@@ -255,7 +255,7 @@
         </div>
     </aside>
 
-    <aside class="bg-dark">
+    <aside>
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>En attendant le lancement de notre plateforme, partagez vos besoins et vos talents avec nous !</h2>
@@ -263,14 +263,14 @@
                     <h3>Ce service m'intéresse</h3>
                     {{ asker_form.as_p }}
                     {% csrf_token %}
-                    <button type="submit" name="userbutton" class="save btn btn-default">J'AI BESOIN D'AIDE !</button>
+                    <button type="submit" name="userbutton" class="save btn btn-primary">J'AI BESOIN D'AIDE !</button>
                 </form>
                 
                 <form method="POST" class="col-lg-6 post-form">
                     <h3>Ce service m'intéresse</h3>
                     {{ tasker_form.as_p }}
                     {% csrf_token %}
-                    <button type="submit" name="offerbutton" class="save btn btn-default">JE PROPOSE MES SERVICES !</button>
+                    <button type="submit" name="offerbutton" class="save btn btn-primary">JE PROPOSE MES SERVICES !</button>
                 </form>
                 
             </div>
@@ -320,7 +320,7 @@
         </div>
     </aside>
 
-    <aside id="contact">
+    <aside id="contact" class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -329,25 +329,25 @@
                     <p>Un avis ? Des questions ? Un commentaire ? Nous sommes à votre écoute.</p>
                 </div>
                 <div class="col-lg-2 col-lg-offset-2 text-center" >
-                    <a href="#" style="color:black;">
+                    <a href="#" style="color:white;">
                         <i class="fa fa-facebook-square fa-3x sr-contact"></i>
                         <p>Facebook</p>
                     </a>
                 </div>
                  <div class="col-lg-2 text-center">
-                    <a href="#" style="color:black;">
+                    <a href="#" style="color:white;">
                         <i class="fa fa-instagram fa-3x sr-contact"></i>
                         <p>Instagram</p>
                     </a>
                 </div>
                 <div class="col-lg-2 text-center">
-                    <a href="#" style="color:black;">
+                    <a href="#" style="color:white;">
                         <i class="fa fa-twitter-square fa-3x sr-contact"></i>
                         <p>Twitter</p>
                     </a>
                 </div>
                 <div class="col-lg-2 text-center">
-                    <a href="mailto:info@hometalent.ch" style="color:black;" >
+                    <a href="mailto:info@hometalent.ch" style="color:white;" >
                         <i class="fa fa-envelope-o fa-3x sr-contact"></i>
                         <p>info@hometalent.ch</p>
                     </a>
