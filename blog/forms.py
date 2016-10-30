@@ -9,15 +9,30 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'text',)
 
-class MailForm(forms.ModelForm):
+class MailFormAsker(forms.ModelForm):
 
     class Meta:
         model = Mail
-        fields = ('address','service')
+        fields = ('service','address','user_type')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
+            'user_type': forms.HiddenInput()
         }
         labels = {
-            'address': '',
-            'service': 'Quel est le service dont vous avez le plus besoin ? (facultatif)'
+            'service': 'Mon besoin !',
+            'address': ''
+        }
+
+class MailFormTasker(forms.ModelForm):
+
+    class Meta:
+        model = Mail
+        fields = ('service','address','user_type')
+        widgets = {
+            'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
+            'user_type': forms.HiddenInput()
+        }
+        labels = {
+            'service': 'Mon talent !',
+            'address': ''
         }

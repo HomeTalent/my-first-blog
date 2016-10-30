@@ -32,14 +32,25 @@ class Mail(models.Model):
         ('prestation-administratif', 'Prestations Administratif'),
         ('service-personne', 'Service a la personne')
     )
+
+    USER_TYPES = (
+        ('A', 'ASKER'),
+        ('T', 'TASKER')
+    )
     
     address = models.EmailField()
+    user_type = models.CharField(
+        max_length=1,
+        choices=USER_TYPES,
+        default='A'
+    )
     service = models.CharField(
         max_length=254,
         choices=SERVICES_CHOICES
     )
     created_date = models.DateTimeField(
-            default=timezone.now)
+        default=timezone.now
+    )
 
     def publish(self):
         self.save()

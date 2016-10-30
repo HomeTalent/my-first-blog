@@ -18,3 +18,7 @@ services:
      - db:db653674001.db.1and1.com
    depends_on:
      - db
+   environment:
+     - MYSQL_DATABASE
+     - MYSQL_USER
+     - MYSQL_PASSWORD

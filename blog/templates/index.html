@@ -34,10 +34,22 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+        #homeHeading {
+            background-color: black;
+        }
+
         .services-list li {
             list-style: none;
+            color: black;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
         }
         
+        hr.secondary {
+            border-color: white;
+        }
+
         #id_service {
             color:black;
             display: block;
@@ -62,13 +74,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Concept</a>
+                        <a class="page-scroll" href="#header">Concept</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Service</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Exemples</a>
+                        <a class="page-scroll" href="#services">Service &amp; Exemples</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -80,7 +89,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
+    <!--<header>
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading"><span style="background-color:rgba(0,0,0,.75);">Besoin d'un coup de main?</span></h1>
@@ -89,9 +98,18 @@
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Découvrez le concept</a>
             </div>
         </div>
+    </header>-->
+
+    <header id="header">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">De quel talent avez-vous besoin ?</h1>
+                <hr>
+            </div>
+        </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <!--<section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -102,83 +120,44 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="services">
+    </section>-->
+    <aside class="bg-primary" id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Quels avantages ?</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Qualité</h3>
-                        <p class="text-muted">Trouvez LA personne qu'il vous faut, compétente, honnête et à un tarif raisonnable.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-clock-o text-primary sr-icons"></i>
-                        <h3>Flexibilité</h3>
-                        <p class="text-muted">Vous pouvez demander de l'aide pour 15 minutes ou pour toute une journée.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Rapidité</h3>
-                        <p class="text-muted">Voyez en temps réel qui est disponible et où.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-map-marker text-primary sr-icons"></i>
-                        <h3>Proximité</h3>
-                        <p class="text-muted">Echangez des services avec des personnes proches de chez vous.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="no-padding" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Tous les services</h2>
-                    <hr class="primary">
+                    <h2 class="section-heading">Services</h2>
+                    <hr class="secondary">
                 </div>
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <ul class="services-list">
-                        <li>Bricolage</li>
-                        <li>Jardinage</li>
-                        <li>Demenagement</li>
-                        <li>Menage/Repassage</li>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <ul class="list-group services-list">
+                        <li class="list-group-item">Bricolage</li>
+                        <li class="list-group-item">Jardinage</li>
+                        <li class="list-group-item">Demenagement</li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <ul class="services-list">
-                        <li>Assemblage meuble</li>
-                        <li>Informatique</li>
-                        <li>Rammassage et livraison </li>
-                        <li>Animaux</li>
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <ul class="list-group services-list">
+                        <li class="list-group-item">Menage/Repassage</li>
+                        <li class="list-group-item">Assemblage meuble</li>
+                        <li class="list-group-item">Informatique</li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <ul class="services-list">
-                        <li>Evenementiel</li> 
-                        <li>Prestations Administratif</li>
-                        <li>Service à la personne</li>
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <ul class="list-group services-list">
+                        <li class="list-group-item">Rammassage et livraison </li>
+                        <li class="list-group-item">Animaux</li>
+                        <li class="list-group-item">Evenementiel</li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <ul class="list-group services-list">
+                        <li class="list-group-item">Administratif</li>
+                        <li class="list-group-item">Service à la personne</li>
+                        <li class="list-group-item">Et plus encore ...</li>
                     </ul>
                 </div>
                 <!--<div class="col-lg-4 col-sm-6">
@@ -272,22 +251,25 @@
                     </a>
                 </div>-->
             </div>
+            <h3 class="text-center">Hometalent vous trouve une personne fiable et compétente près de chez vous.</h3>
         </div>
-    </section>
+    </aside>
 
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Soyez les premiers à recevoir un message quand Hometalent ouvrira !</h2>
-                <form method="POST" style="float : left" class="post-form">{% csrf_token %}
-                    <h3>Ce service m'intéresse (demande) !</h3>
-                    {{ form.as_p }}
+                <h2>En attendant le lancement de notre plateforme, partagez vos besoins et vos talents avec nous !</h2>
+                <form method="POST" class="col-lg-6 post-form">
+                    <h3>Ce service m'intéresse</h3>
+                    {{ asker_form.as_p }}
+                    {% csrf_token %}
                     <button type="submit" name="userbutton" class="save btn btn-default">J'AI BESOIN D'AIDE !</button>
                 </form>
                 
-                <form method="POST" style="float : right" class="post-form">{% csrf_token %}
-                    <h3>Ce service m'intéresse (offre) !</h3>
-                    {{ form.as_p }}
+                <form method="POST" class="col-lg-6 post-form">
+                    <h3>Ce service m'intéresse</h3>
+                    {{ tasker_form.as_p }}
+                    {% csrf_token %}
                     <button type="submit" name="offerbutton" class="save btn btn-default">JE PROPOSE MES SERVICES !</button>
                 </form>
                 
@@ -295,7 +277,50 @@
         </div>
     </aside>
 
-    <section id="contact">
+    <aside id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Quels avantages ?</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                        <h3>Qualité</h3>
+                        <p class="text-muted">Trouvez LA personne qu'il vous faut, compétente, honnête et à un tarif raisonnable.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-clock-o text-primary sr-icons"></i>
+                        <h3>Flexibilité</h3>
+                        <p class="text-muted">Vous pouvez demander de l'aide pour 15 minutes ou pour toute une journée.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                        <h3>Rapidité</h3>
+                        <p class="text-muted">Voyez en temps réel qui est disponible et où.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-map-marker text-primary sr-icons"></i>
+                        <h3>Proximité</h3>
+                        <p class="text-muted">Echangez des services avec des personnes proches de chez vous.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <aside id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -303,25 +328,33 @@
                     <hr class="primary">
                     <p>Un avis ? Des questions ? Un commentaire ? Nous sommes à votre écoute.</p>
                 </div>
-                <div class="col-lg-2 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>xxx-xxx-xxxx</p>
+                <div class="col-lg-2 col-lg-offset-2 text-center" >
+                    <a href="#" style="color:black;">
+                        <i class="fa fa-facebook-square fa-3x sr-contact"></i>
+                        <p>Facebook</p>
+                    </a>
                 </div>
-                <div class="col-lg-2 text-center" >
-                    <a href="#"><i style="color:black;" class="fa fa-facebook-square fa-3x sr-contact"></i></a>
-                    <p>Facebook</p>
-                </div>
-                <div class="col-lg-2 text-center" style="color:black;">
-                    <a href="#"><i style="color:black;" class="fa fa-twitter-square fa-3x sr-contact"></i></a>
-                    <p>Twitter</p>
+                 <div class="col-lg-2 text-center">
+                    <a href="#" style="color:black;">
+                        <i class="fa fa-instagram fa-3x sr-contact"></i>
+                        <p>Instagram</p>
+                    </a>
                 </div>
                 <div class="col-lg-2 text-center">
-                    <a href="mailto:info@hometalent.ch"><i style="color:black;" class="fa fa-envelope-o fa-3x sr-contact"></i></a>
-                    <p>info@hometalent.ch</p>
+                    <a href="#" style="color:black;">
+                        <i class="fa fa-twitter-square fa-3x sr-contact"></i>
+                        <p>Twitter</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="mailto:info@hometalent.ch" style="color:black;" >
+                        <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                        <p>info@hometalent.ch</p>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </aside>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
