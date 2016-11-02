@@ -22,15 +22,16 @@ class Mail(models.Model):
     SERVICES_CHOICES = (
         ('bricolage', 'Bricolage'),
         ('jardinage', 'Jardinage'),
-        ('demenagement', 'Demenagement'),
-        ('menage-repassage', 'Menage/Repassage'),
+        ('demenagement', 'Déménagement'),
+        ('menage-repassage', 'Ménage/Repassage'),
         ('assemblage-meuble', 'Assemblage meuble'),
         ('informatique', 'Informatique'),
-        ('ramassage-livraison', 'Rammassage et livraison'),
-        ('animaux', 'Animaux'),
-        ('evenementiel', 'Evenementiel'),
-        ('prestation-administratif', 'Prestations Administratif'),
-        ('service-personne', 'Service a la personne')
+        ('coursier', 'Coursier'),
+        ('animaux', 'Garde d\'animaux'),
+        ('evenementiel', 'Evénementiel'),
+        ('prestation-administratif', 'Administratif'),
+        ('service-personne', 'Service à la personne'),
+        ('mode-beaute', 'Mode, Beauté & Bien-être')
     )
 
     USER_TYPES = (
