@@ -11,10 +11,11 @@ def index(request):
         if 'userbutton' in request.POST:
             form = MailFormAsker(request.POST)
         elif 'offerbutton' in request.POST:
-                form = MailFormTasker(request.POST)
+            form = MailFormTasker(request.POST)
 
         if form.is_valid():
             mail = form.save(commit=False)
+            mail.service = ", ".join( request.service )
             mail.save()
             return redirect('/', pk=mail.pk)
         else:
