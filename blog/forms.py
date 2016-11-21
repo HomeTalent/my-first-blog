@@ -16,6 +16,7 @@ class MailFormAsker(forms.ModelForm):
         fields = ('service','address','user_type')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
+            'service': forms.SelectMultiple(attrs={'class': 'selectpicker'}),
             'user_type': forms.HiddenInput()
         }
         labels = {
@@ -30,6 +31,7 @@ class MailFormTasker(forms.ModelForm):
         fields = ('service','address','user_type')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
+            'service': forms.SelectMultiple(attrs={'class': 'selectpicker'}),
             'user_type': forms.HiddenInput()
         }
         labels = {
