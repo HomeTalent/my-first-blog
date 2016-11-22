@@ -13,6 +13,7 @@ class MailFormAsker(forms.ModelForm):
 
     class Meta:
         model = Mail
+        exclude = ['service']
         fields = ('service','address','user_type')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
@@ -28,6 +29,7 @@ class MailFormTasker(forms.ModelForm):
 
     class Meta:
         model = Mail
+        exclude = ['service']
         fields = ('service','address','user_type')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
