@@ -30,7 +30,6 @@ class MailFormAsker(forms.ModelForm):
         )
 
         services = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-                                            choices=SERVICES_CHOICES)
 
         model = Mail
         exclude = ['service']
@@ -47,7 +46,6 @@ class MailFormAsker(forms.ModelForm):
 class MailFormTasker(forms.ModelForm):
 
     class Meta:
-
         SERVICES_CHOICES = (
             ('bricolage', 'Bricolage'),
             ('jardinage', 'Jardinage'),
@@ -62,6 +60,7 @@ class MailFormTasker(forms.ModelForm):
             ('service-personne', 'Service à la personne'),
             ('mode-beaute', 'Mode, Beauté & Bien-être')
         )
+
         services = forms.MultipleChoiceField(widget=forms.SelectMultiple, 
                                             choices=SERVICES_CHOICES)
 
