@@ -12,23 +12,25 @@ class PostForm(forms.ModelForm):
 
 class MailFormAsker(forms.ModelForm):
 
-    SERVICES_CHOICES = (
-        ('bricolage', 'Bricolage'),
-        ('jardinage', 'Jardinage'),
-        ('demenagement', 'Déménagement'),
-        ('menage-repassage', 'Ménage/Repassage'),
-        ('assemblage-meuble', 'Assemblage meuble'),
-        ('informatique', 'Informatique'),
-        ('coursier', 'Coursier'),
-        ('animaux', 'Garde d\'animaux'),
-        ('evenementiel', 'Evénementiel'),
-        ('prestation-administratif', 'Administratif'),
-        ('service-personne', 'Service à la personne'),
-        ('mode-beaute', 'Mode, Beauté & Bien-être')
-    )
-
     class Meta:
-        services = forms.MultipleChoiceField(widget=forms.SelectMultiple, attrs={'class': 'selectpicker'}, choices=SERVICES_CHOICES)
+
+        SERVICES_CHOICES = (
+            ('bricolage', 'Bricolage'),
+            ('jardinage', 'Jardinage'),
+            ('demenagement', 'Déménagement'),
+            ('menage-repassage', 'Ménage/Repassage'),
+            ('assemblage-meuble', 'Assemblage meuble'),
+            ('informatique', 'Informatique'),
+            ('coursier', 'Coursier'),
+            ('animaux', 'Garde d\'animaux'),
+            ('evenementiel', 'Evénementiel'),
+            ('prestation-administratif', 'Administratif'),
+            ('service-personne', 'Service à la personne'),
+            ('mode-beaute', 'Mode, Beauté & Bien-être')
+        )
+
+        services = forms.MultipleChoiceField(widget=forms.SelectMultiple,
+                                            choices=SERVICES_CHOICES)
 
         model = Mail
         exclude = ['service']
@@ -44,24 +46,24 @@ class MailFormAsker(forms.ModelForm):
 
 class MailFormTasker(forms.ModelForm):
 
-    SERVICES_CHOICES = (
-        ('bricolage', 'Bricolage'),
-        ('jardinage', 'Jardinage'),
-        ('demenagement', 'Déménagement'),
-        ('menage-repassage', 'Ménage/Repassage'),
-        ('assemblage-meuble', 'Assemblage meuble'),
-        ('informatique', 'Informatique'),
-        ('coursier', 'Coursier'),
-        ('animaux', 'Garde d\'animaux'),
-        ('evenementiel', 'Evénementiel'),
-        ('prestation-administratif', 'Administratif'),
-        ('service-personne', 'Service à la personne'),
-        ('mode-beaute', 'Mode, Beauté & Bien-être')
-    )
-
-
     class Meta:
-        services = forms.MultipleChoiceField(widget=forms.SelectMultiple, attrs={'class': 'selectpicker'}, choices=SERVICES_CHOICES)
+
+        SERVICES_CHOICES = (
+            ('bricolage', 'Bricolage'),
+            ('jardinage', 'Jardinage'),
+            ('demenagement', 'Déménagement'),
+            ('menage-repassage', 'Ménage/Repassage'),
+            ('assemblage-meuble', 'Assemblage meuble'),
+            ('informatique', 'Informatique'),
+            ('coursier', 'Coursier'),
+            ('animaux', 'Garde d\'animaux'),
+            ('evenementiel', 'Evénementiel'),
+            ('prestation-administratif', 'Administratif'),
+            ('service-personne', 'Service à la personne'),
+            ('mode-beaute', 'Mode, Beauté & Bien-être')
+        )
+        services = forms.MultipleChoiceField(widget=forms.SelectMultiple, 
+                                            choices=SERVICES_CHOICES)
 
         model = Mail
         exclude = ['service']
