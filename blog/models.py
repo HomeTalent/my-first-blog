@@ -21,20 +21,6 @@ class Post(models.Model):
         return self.title
 
 class Mail(models.Model):
-    SERVICES_CHOICES = (
-        ('bricolage', 'Bricolage'),
-        ('jardinage', 'Jardinage'),
-        ('demenagement', 'Déménagement'),
-        ('menage-repassage', 'Ménage/Repassage'),
-        ('assemblage-meuble', 'Assemblage meuble'),
-        ('informatique', 'Informatique'),
-        ('coursier', 'Coursier'),
-        ('animaux', 'Garde d\'animaux'),
-        ('evenementiel', 'Evénementiel'),
-        ('prestation-administratif', 'Administratif'),
-        ('service-personne', 'Service à la personne'),
-        ('mode-beaute', 'Mode, Beauté & Bien-être')
-    )
 
     USER_TYPES = (
         ('A', 'ASKER'),
@@ -48,8 +34,7 @@ class Mail(models.Model):
         default='A'
     )
     service = models.CharField(
-        max_length=254,
-        choices=SERVICES_CHOICES
+        max_length=400
     )
     created_date = models.DateTimeField(
         default=timezone.now

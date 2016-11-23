@@ -15,7 +15,7 @@ def index(request):
 
         if form.is_valid():
             mail = form.save(commit=False)
-            mail.service = ", ".join( request.service )
+            mail.service = ", ".join( form.cleaned_data.services )
             mail.save()
             return redirect('/', pk=mail.pk)
         else:

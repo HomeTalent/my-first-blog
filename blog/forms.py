@@ -11,32 +11,65 @@ class PostForm(forms.ModelForm):
 
 class MailFormAsker(forms.ModelForm):
 
+    SERVICES_CHOICES = (
+        ('bricolage', 'Bricolage'),
+        ('jardinage', 'Jardinage'),
+        ('demenagement', 'Déménagement'),
+        ('menage-repassage', 'Ménage/Repassage'),
+        ('assemblage-meuble', 'Assemblage meuble'),
+        ('informatique', 'Informatique'),
+        ('coursier', 'Coursier'),
+        ('animaux', 'Garde d\'animaux'),
+        ('evenementiel', 'Evénementiel'),
+        ('prestation-administratif', 'Administratif'),
+        ('service-personne', 'Service à la personne'),
+        ('mode-beaute', 'Mode, Beauté & Bien-être')
+    )
+
     class Meta:
+        services = forms.MultipleChoiceField(widget=forms.SelectMultiple, attrs={'class': 'selectpicker'}, choices=SERVICES_CHOICES)
+
         model = Mail
         exclude = ['service']
-        fields = ('service','address','user_type')
+        fields = ('services','address','user_type')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
-            'service': forms.SelectMultiple(attrs={'class': 'selectpicker'}),
             'user_type': forms.HiddenInput()
         }
         labels = {
-            'service': 'Mon besoin !',
+            'services': 'Mes besoins !',
             'address': ''
         }
 
 class MailFormTasker(forms.ModelForm):
 
+    SERVICES_CHOICES = (
+        ('bricolage', 'Bricolage'),
+        ('jardinage', 'Jardinage'),
+        ('demenagement', 'Déménagement'),
+        ('menage-repassage', 'Ménage/Repassage'),
+        ('assemblage-meuble', 'Assemblage meuble'),
+        ('informatique', 'Informatique'),
+        ('coursier', 'Coursier'),
+        ('animaux', 'Garde d\'animaux'),
+        ('evenementiel', 'Evénementiel'),
+        ('prestation-administratif', 'Administratif'),
+        ('service-personne', 'Service à la personne'),
+        ('mode-beaute', 'Mode, Beauté & Bien-être')
+    )
+
+
     class Meta:
+        services = forms.MultipleChoiceField(widget=forms.SelectMultiple, attrs={'class': 'selectpicker'}, choices=SERVICES_CHOICES)
+
         model = Mail
         exclude = ['service']
-        fields = ('service','address','user_type')
+        fields = ('services', 'address','user_type')
         widgets = {
             'address': forms.EmailInput(attrs={'placeholder': 'mail@example.com'}),
-            'service': forms.SelectMultiple(attrs={'class': 'selectpicker'}),
             'user_type': forms.HiddenInput()
         }
         labels = {
-            'service': 'Mon talent !',
+            'services': 'Mes talents !',
             'address': ''
         }
