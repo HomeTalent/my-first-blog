@@ -1,5 +1,6 @@
-from django import forms
+# -*- coding: utf8 -*-
 
+from django import forms
 from .models import Post
 from .models import Mail
 
