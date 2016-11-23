@@ -27,7 +27,8 @@ class MailFormAsker(forms.ModelForm):
         ('mode-beaute', 'Mode, Beauté & Bien-être')
     )
 
-    services = forms.MultipleChoiceField(widget=forms.SelectMultiple(attrs={'class': 'selectpicker'}),
+    services = forms.MultipleChoiceField(label='Mes besoins !',
+                                        widget=forms.SelectMultiple(attrs={'class': 'selectpicker'}),
                                         choices=SERVICES_CHOICES)
     class Meta:
 
@@ -39,7 +40,6 @@ class MailFormAsker(forms.ModelForm):
             'user_type': forms.HiddenInput()
         }
         labels = {
-            'services': 'Mes besoins !',
             'address': ''
         }
 
@@ -60,7 +60,8 @@ class MailFormTasker(forms.ModelForm):
         ('mode-beaute', 'Mode, Beauté & Bien-être')
     )
 
-    services = forms.MultipleChoiceField(widget=forms.SelectMultiple(attrs={'class': 'selectpicker'}),
+    services = forms.MultipleChoiceField(label='Mes talents !',
+                                        widget=forms.SelectMultiple(attrs={'class': 'selectpicker'}),
                                         choices=SERVICES_CHOICES)
     class Meta:
         model = Mail
@@ -71,6 +72,5 @@ class MailFormTasker(forms.ModelForm):
             'user_type': forms.HiddenInput()
         }
         labels = {
-            'services': 'Mes talents !',
             'address': ''
         }
