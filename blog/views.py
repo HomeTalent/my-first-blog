@@ -7,6 +7,10 @@ from .forms import MailFormTasker
 from django.shortcuts import redirect
 
 def index(request):
+    asker_form=MailFormAsker(initial={'user_type': 'A'})
+    tasker_form=MailFormTasker(initial={'user_type': 'T'})
+    sent=false
+
     if request.method == "POST":
         if 'userbutton' in request.POST:
             form = MailFormAsker(request.POST)
@@ -17,11 +21,9 @@ def index(request):
             mail = form.save(commit=False)
             mail.service = ", ".join( request.POST.getlist('services'))
             mail.save()
-            return redirect('/', pk=mail.pk)
+            sent=true
         else:
             asker_form=MailFormAsker(initial={'user_type': 'A'})
             tasker_form=MailFormTasker(initial={'user_type': 'T'})
-    else:
-        asker_form=MailFormAsker(initial={'user_type': 'A'})
-        tasker_form=MailFormTasker(initial={'user_type': 'T'})
-    return render(request, 'index.html', {'asker_form': asker_form, 'tasker_form': tasker_form})
+        
+    return render(request, 'index.html', {'asker_form': asker_form, 'tasker_form': tasker_form, 'sent': sent})
