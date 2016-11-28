@@ -218,6 +218,28 @@
         </ul>
     </header>
 
+    <aside id="talents">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>En attendant le lancement de notre plateforme, partagez vos besoins et vos talents avec nous !</h2>
+                <form method="POST" class="col-lg-6 post-form">
+                    <h3>Ce service m'intéresse</h3>
+                    {{ asker_form.as_p }}
+                    {% csrf_token %}
+                    <button type="submit" name="userbutton" class="save btn btn-primary">J'AI BESOIN D'AIDE !</button>
+                </form>
+                
+                <form method="POST" class="col-lg-6 post-form">
+                    <h3>Ce service m'intéresse</h3>
+                    {{ tasker_form.as_p }}
+                    {% csrf_token %}
+                    <button type="submit" name="offerbutton" class="save btn btn-primary">JE PROPOSE MES SERVICES !</button>
+                </form>
+                
+            </div>
+        </div>
+    </aside>
+
     <!--<section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
@@ -362,28 +384,6 @@
                 </div>-->
             </div>
             <h3 class="text-center">Et plus encore ...</h3>
-        </div>
-    </aside>
-
-    <aside id="talents">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>En attendant le lancement de notre plateforme, partagez vos besoins et vos talents avec nous !</h2>
-                <form method="POST" class="col-lg-6 post-form">
-                    <h3>Ce service m'intéresse</h3>
-                    {{ asker_form.as_p }}
-                    {% csrf_token %}
-                    <button type="submit" name="userbutton" class="save btn btn-primary">J'AI BESOIN D'AIDE !</button>
-                </form>
-                
-                <form method="POST" class="col-lg-6 post-form">
-                    <h3>Ce service m'intéresse</h3>
-                    {{ tasker_form.as_p }}
-                    {% csrf_token %}
-                    <button type="submit" name="offerbutton" class="save btn btn-primary">JE PROPOSE MES SERVICES !</button>
-                </form>
-                
-            </div>
         </div>
     </aside>
 
