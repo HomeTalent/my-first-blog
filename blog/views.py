@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 def index(request):
     asker_form=MailFormAsker(initial={'user_type': 'A'})
     tasker_form=MailFormTasker(initial={'user_type': 'T'})
-    sent=false
+    sent='false'
 
     if request.method == "POST":
         if 'userbutton' in request.POST:
@@ -21,7 +21,7 @@ def index(request):
             mail = form.save(commit=False)
             mail.service = ", ".join( request.POST.getlist('services'))
             mail.save()
-            sent=true
+            sent='true'
         else:
             asker_form=MailFormAsker(initial={'user_type': 'A'})
             tasker_form=MailFormTasker(initial={'user_type': 'T'})
