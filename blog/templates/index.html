@@ -209,6 +209,7 @@
                     <li>
                         <form action="{% url 'set_language' %}" id="select-lang" method="post" onChange="this.submit();">{% csrf_token %}
                             {% get_current_language as LANGUAGE_CODE %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}" />
                             <input type="radio" id="en" name="language" {% if "en" == LANGUAGE_CODE %} checked="checked"{% endif %} value="en"/><label for="en">EN</label>|
                             <input type="radio" id="fr" name="language" {% if "fr" == LANGUAGE_CODE %} checked="checked"{% endif %} value="fr"/><label for="fr">FR</label>
                         </form>
