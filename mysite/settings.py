@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h__+*(fy=ef!1lx@2^v_h113+w4n&e_aw26=o#m&_toui-g_e6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -115,9 +115,9 @@ TIME_ZONE = 'Europe/Paris'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
-USE_TZ = True
+USE_TZ = False
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
