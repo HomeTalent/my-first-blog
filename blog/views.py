@@ -17,7 +17,7 @@ def index(request):
         elif 'offerbutton' in request.POST:
             form = MailFormTasker(request.POST)
 
-        if form.is_valid():
+        if form in vars() and form.is_valid():
             mail = form.save(commit=False)
             mail.service = ", ".join( request.POST.getlist('services'))
             mail.save()
