@@ -19,7 +19,7 @@ def index(request):
 
         if form.is_valid():
             mail = form.save(commit=False)
-            mail.service = ", ".join( request.POST.getlist('services'))
+            mail.service = ", ".join(request.POST.getlist('services'))
             mail.save()
             sent='true'
         else:
