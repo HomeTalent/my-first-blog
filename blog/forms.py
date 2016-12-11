@@ -1,6 +1,7 @@
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 
 from django import forms
+from django.utils.translation import ugettext as _
 from .models import Post
 from .models import Mail
 
@@ -27,7 +28,7 @@ class MailFormAsker(forms.ModelForm):
         ('mode-beaute', 'Mode, Beauté & Bien-être')
     )
 
-    services = forms.MultipleChoiceField(label='Mes besoins !',
+    services = forms.MultipleChoiceField(label=_('Mes besoins !'),
                                         widget=forms.SelectMultiple(attrs={'class': 'selectpicker'}),
                                         choices=SERVICES_CHOICES)
     class Meta:
@@ -60,7 +61,7 @@ class MailFormTasker(forms.ModelForm):
         ('mode-beaute', 'Mode, Beauté & Bien-être')
     )
 
-    services = forms.MultipleChoiceField(label='Mes talents !',
+    services = forms.MultipleChoiceField(label=_('Mes talents !'),
                                         widget=forms.SelectMultiple(attrs={'class': 'selectpicker'}),
                                         choices=SERVICES_CHOICES)
     class Meta:

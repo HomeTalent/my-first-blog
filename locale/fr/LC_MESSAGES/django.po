@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-11 22:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: blog/forms.py:31
+msgid "Mes besoins !"
+msgstr "Mes Besoins !"
+
+#: blog/forms.py:64
+msgid "Mes talents !"
+msgstr "Mes Talents !"
+
+#: blog/templates/index.html:14
+msgid "Hometalent.ch - Entraide à Genève"
+msgstr ""
+
+#: blog/templates/index.html:197
+msgid "Home"
+msgstr "Accueil"
+
+#: blog/templates/index.html:200 blog/templates/index.html:296
+msgid "Services"
+msgstr ""
+
+#: blog/templates/index.html:203
+msgid "Contact"
+msgstr ""
+
+#: blog/templates/index.html:235
+msgid "De quel talent avez-vous besoin ?"
+msgstr "De quel talent avez-vous besoin ?"
+
+#: blog/templates/index.html:260
+msgid ""
+"En attendant le lancement de notre plateforme, partagez vos besoins et vos "
+"talents avec nous !"
+msgstr ""
+"En attendant le lancement de notre plateforme, partagez vos besoins et vos "
+"talents avec nous !"
+
+#: blog/templates/index.html:262 blog/templates/index.html:269
+msgid "Ce service m'intéresse"
+msgstr "Ce service m'intéresse"
+
+#: blog/templates/index.html:265
+msgid "J'AI BESOIN D'AIDE !"
+msgstr "J'AI BESOIN D'AIDE !"
+
+#: blog/templates/index.html:272
+msgid "JE PROPOSE MES SERVICES !"
+msgstr "JE PROPOSE MES SERVICES !"
+
+#: blog/templates/index.html:293
+msgid ""
+"Hometalent vous trouve une personne fiable et compétente près de chez vous."
+msgstr ""
+"Hometalent vous trouve une personne fiable et compétente près de chez vous."
+
+#: blog/templates/index.html:305
+msgid "Bricolage"
+msgstr "Bricolage"
+
+#: blog/templates/index.html:306
+msgid "Jardinage"
+msgstr "Jardinage"
+
+#: blog/templates/index.html:307
+msgid "Déménagement"
+msgstr "Déménagement"
+
+#: blog/templates/index.html:312
+msgid "Ménage/Repassage"
+msgstr "Ménage/Repassage"
+
+#: blog/templates/index.html:313
+msgid "Assemblage meuble"
+msgstr "Assemblage meuble"
+
+#: blog/templates/index.html:314
+msgid "Informatique"
+msgstr "Informatique"
+
+#: blog/templates/index.html:319
+msgid "Coursier"
+msgstr "Coursier"
+
+#: blog/templates/index.html:320
+msgid "Garde d'animaux"
+msgstr "Garde d'animaux"
+
+#: blog/templates/index.html:321
+msgid "Evénementiel"
+msgstr "Evénementiel"
+
+#: blog/templates/index.html:326
+msgid "Administratif"
+msgstr "Administratif"
+
+#: blog/templates/index.html:327
+msgid "Service à la personne"
+msgstr "Service à la personne"
+
+#: blog/templates/index.html:328
+msgid "Mode, Beauté &amp; Bien-être"
+msgstr "Mode, Beauté &amp; Bien-être"
+
+#: blog/templates/index.html:422
+msgid "Et plus encore ..."
+msgstr "Et plus encore ..."
+
+#: blog/templates/index.html:430
+msgid "Quels avantages ?"
+msgstr "Quels avantages ?"
+
+#: blog/templates/index.html:440
+msgid "Qualité"
+msgstr "Qualité"
+
+#: blog/templates/index.html:441
+msgid ""
+"Trouvez LE Talent qu'il vous faut, compétent, honnête et à un tarif "
+"raisonnable."
+msgstr ""
+"Trouvez LE Talent qu'il vous faut, compétent, honnête et à un tarif "
+"raisonnable."
+
+#: blog/templates/index.html:447
+msgid "Flexibilité"
+msgstr "Flexibilité"
+
+#: blog/templates/index.html:448
+msgid "Demandez de l'aide pour une heure ou pour toute une journée."
+msgstr "Demandez de l'aide pour une heure ou pour toute une journée."
+
+#: blog/templates/index.html:454
+msgid "Rapidité"
+msgstr "Rapidité"
+
+#: blog/templates/index.html:455
+msgid "Voyez en temps réel qui est disponible et où."
+msgstr "Voyez en temps réel qui est disponible et où."
+
+#: blog/templates/index.html:461
+msgid "Proximité"
+msgstr "Proximité"
+
+#: blog/templates/index.html:462
+msgid "Echangez des services avec des personnes proches de chez vous."
+msgstr "Echangez des services avec des personnes proches de chez vous."
+
+#: blog/templates/index.html:473
+msgid "Contactez nous!"
+msgstr "Contactez nous!"
+
+#: blog/templates/index.html:475
+msgid "Un avis ? Des questions ? Un commentaire ? Nous sommes à votre écoute."
+msgstr "Un avis ? Des questions ? Un commentaire ? Nous sommes à votre écoute."
+
+#: blog/templates/index.html:508
+msgid ""
+"Merci pour votre participation! nous vous recontacterons dès l'ouverture du "
+"service"
+msgstr ""
+"Merci pour votre participation! nous vous recontacterons dès l'ouverture du "
+"service"

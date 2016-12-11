@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hometalent.ch - Entraide à Genève</title>
+    <title>{% blocktrans %}Hometalent.ch - Entraide à Genève{% endblocktrans %}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -155,6 +156,25 @@
             right: 0;
             width: 70%;
         }
+        #select-lang {
+            margin-top: 5px;
+        }
+
+        #select-lang label {
+            font-weight: normal;
+        }
+
+        #select-lang input {
+            display: none;
+        }
+
+        #fr:checked ~ label[for="fr"] {
+            font-weight: bold;
+        }
+
+        #en:checked ~ label[for="en"] {
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -174,13 +194,20 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#header">Concept</a>
+                        <a class="page-scroll" href="#header">{% trans "Home" %}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">{% trans "Services" %}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">{% trans "Contact" %}</a>
+                    </li>
+                    <li>
+                        <form action="{% url 'set_language' %}" id="select-lang" method="post" onChange="this.submit();">{% csrf_token %}
+                            {% get_current_language as LANGUAGE_CODE %}
+                            <input type="radio" id="en" name="language" {% if "en" == LANGUAGE_CODE %} checked="checked"{% endif %} value="en"/><label for="en">EN</label>|
+                            <input type="radio" id="fr" name="language" {% if "fr" == LANGUAGE_CODE %} checked="checked"{% endif %} value="fr"/><label for="fr">FR</label>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -205,7 +232,7 @@
             <li>
                 <span></span>
                 <div id="homeDiv">
-                    <h1 id="homeHeading">De quel talent avez-vous besoin ?</h1>
+                    <h1 id="homeHeading">{% trans "De quel talent avez-vous besoin ?" %}</h1>
                     <hr>
                 </div>
             </li>
@@ -230,19 +257,19 @@
     <aside id="talents">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>En attendant le lancement de notre plateforme, partagez vos besoins et vos talents avec nous !</h2>
+                <h2>{% blocktrans %}En attendant le lancement de notre plateforme, partagez vos besoins et vos talents avec nous !{% endblocktrans %}</h2>
                 <form method="POST" class="col-lg-6 post-form">
-                    <h3>Ce service m'intéresse</h3>
+                    <h3>{% blocktrans %}Ce service m'intéresse{% endblocktrans %}</h3>
                     {{ asker_form.as_p }}
                     {% csrf_token %}
-                    <button type="submit" name="userbutton" class="save btn btn-primary">J'AI BESOIN D'AIDE !</button>
+                    <button type="submit" name="userbutton" class="save btn btn-primary">{% blocktrans %}J'AI BESOIN D'AIDE !{% endblocktrans %}</button>
                 </form>
                 
                 <form method="POST" class="col-lg-6 post-form">
-                    <h3>Ce service m'intéresse</h3>
+                    <h3>{% blocktrans %}Ce service m'intéresse{% endblocktrans %}</h3>
                     {{ tasker_form.as_p }}
                     {% csrf_token %}
-                    <button type="submit" name="offerbutton" class="save btn btn-primary">JE PROPOSE MES SERVICES !</button>
+                    <button type="submit" name="offerbutton" class="save btn btn-primary">{% blocktrans %}JE PROPOSE MES SERVICES !{% endblocktrans %}</button>
                 </form>
                 
             </div>
@@ -263,10 +290,10 @@
     </section>-->
     <aside class="bg-primary" id="services">
         <div class="container">
-            <h3 class="text-center">Hometalent vous trouve une personne fiable et compétente près de chez vous.</h3>
+            <h3 class="text-center">{% blocktrans %}Hometalent vous trouve une personne fiable et compétente près de chez vous.{% endblocktrans %}</h3>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
+                    <h2 class="section-heading">{% blocktrans %}Services{% endblocktrans %}</h2>
                     <hr class="secondary">
                 </div>
             </div>
@@ -275,30 +302,30 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6 text-center">
                     <ul class="list-group services-list">
-                        <li class="list-group-item">Bricolage</li>
-                        <li class="list-group-item">Jardinage</li>
-                        <li class="list-group-item">Déménagement</li>
+                        <li class="list-group-item">{% blocktrans %}Bricolage{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Jardinage{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Déménagement{% endblocktrans %}</li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <ul class="list-group services-list">
-                        <li class="list-group-item">Ménage/Repassage</li>
-                        <li class="list-group-item">Assemblage meuble</li>
-                        <li class="list-group-item">Informatique</li>
+                        <li class="list-group-item">{% blocktrans %}Ménage/Repassage{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Assemblage meuble{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Informatique{% endblocktrans %}</li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <ul class="list-group services-list">
-                        <li class="list-group-item">Coursier</li>
-                        <li class="list-group-item">Garde d'animaux</li>
-                        <li class="list-group-item">Evénementiel</li> 
+                        <li class="list-group-item">{% blocktrans %}Coursier{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Garde d'animaux{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Evénementiel{% endblocktrans %}</li> 
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <ul class="list-group services-list">
-                        <li class="list-group-item">Administratif</li>
-                        <li class="list-group-item">Service à la personne</li>
-                        <li class="list-group-item">Mode, Beauté &amp; Bien-être</li>
+                        <li class="list-group-item">{% blocktrans %}Administratif{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Service à la personne{% endblocktrans %}</li>
+                        <li class="list-group-item">{% blocktrans %}Mode, Beauté &amp; Bien-être{% endblocktrans %}</li>
                     </ul>
                 </div>
                 <!--<div class="col-lg-4 col-sm-6">
@@ -392,7 +419,7 @@
                     </a>
                 </div>-->
             </div>
-            <h3 class="text-center">Et plus encore ...</h3>
+            <h3 class="text-center">{% blocktrans %}Et plus encore ...{% endblocktrans %}</h3>
         </div>
     </aside>
 
@@ -400,7 +427,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Quels avantages ?</h2>
+                    <h2 class="section-heading">{% blocktrans %}Quels avantages ?{% endblocktrans %}</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -410,29 +437,29 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Qualité</h3>
-                        <p class="text-muted">Trouvez LE Talent qu'il vous faut, compétent, honnête et à un tarif raisonnable.</p>
+                        <h3>{% blocktrans %}Qualité{% endblocktrans %}</h3>
+                        <p class="text-muted">{% blocktrans %}Trouvez LE Talent qu'il vous faut, compétent, honnête et à un tarif raisonnable.{% endblocktrans %}</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-clock-o text-primary sr-icons"></i>
-                        <h3>Flexibilité</h3>
-                        <p class="text-muted">Demandez de l'aide pour une heure ou pour toute une journée.</p>
+                        <h3>{% blocktrans %}Flexibilité{% endblocktrans %}</h3>
+                        <p class="text-muted">{% blocktrans %}Demandez de l'aide pour une heure ou pour toute une journée.{% endblocktrans %}</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Rapidité</h3>
-                        <p class="text-muted">Voyez en temps réel qui est disponible et où.</p>
+                        <h3>{% blocktrans %}Rapidité{% endblocktrans %}</h3>
+                        <p class="text-muted">{% blocktrans %}Voyez en temps réel qui est disponible et où.{% endblocktrans %}</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-map-marker text-primary sr-icons"></i>
-                        <h3>Proximité</h3>
-                        <p class="text-muted">Echangez des services avec des personnes proches de chez vous.</p>
+                        <h3>{% blocktrans %}Proximité{% endblocktrans %}</h3>
+                        <p class="text-muted">{% blocktrans %}Echangez des services avec des personnes proches de chez vous.{% endblocktrans %}</p>
                     </div>
                 </div>
             </div>
@@ -443,9 +470,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Contactez nous!</h2>
+                    <h2 class="section-heading">{% blocktrans %}Contactez nous!{% endblocktrans %}</h2>
                     <hr class="primary">
-                    <p>Un avis ? Des questions ? Un commentaire ? Nous sommes à votre écoute.</p>
+                    <p>{% blocktrans %}Un avis ? Des questions ? Un commentaire ? Nous sommes à votre écoute.{% endblocktrans %}</p>
                 </div>
                 <div class="col-lg-2 col-lg-offset-2 text-center" >
                     <a href="https://www.facebook.com/hometalentCH" style="color:white;" target="_blank">
@@ -478,7 +505,7 @@
     {% if sent == 'true' %}
         <div class="alert alert-success alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Merci pour votre participation!</strong> nous vous recontacterons dès l'ouverture du service
+          {% blocktrans %}Merci pour votre participation! nous vous recontacterons dès l'ouverture du service{% endblocktrans %}
         </div>
         <script type="text/javascript">
             setTimeout(function() {

@@ -2,23 +2,28 @@ version: "2"
 services:
  db:
    image: mysql
+   volumes:
+      - db_data:/var/lib/mysql
+   restart: always
    environment:
-     - MYSQL_ROOT_PASSWORD=rootPassw0rd
-     - MYSQL_DATABASE
-     - MYSQL_USER
-     - MYSQL_PASSWORD
+      MYSQL_ROOT_PASSWORD: rootPassw0rd
+      MYSQL_DATABASE: 
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 
  web:
    build: .
    command: python manage.py runserver 0.0.0.0:1337
    volumes:
-     - .:/app
+      - .:/app
    ports:
-     - "1337:1337"
+      - "1337:1337"
    links:
-     - db:nrin.myd.infomaniak.com
+      - db:nrin.myd.infomaniak.com
    depends_on:
-     - db
+      - db
    environment:
-     - MYSQL_DATABASE
-     - MYSQL_USER
-     - MYSQL_PASSWORD
+      - MYSQL_DATABASE
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+volumes:
+    db_data:
