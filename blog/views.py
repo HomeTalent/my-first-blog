@@ -10,6 +10,7 @@ def index(request):
     asker_form=MailFormAsker(initial={'user_type': 'A'})
     tasker_form=MailFormTasker(initial={'user_type': 'T'})
     sent='false'
+    form=None
 
     if request.method == "POST":
         if 'userbutton' in request.POST:
