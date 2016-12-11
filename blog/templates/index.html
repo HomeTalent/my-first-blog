@@ -175,6 +175,10 @@
         #en:checked ~ label[for="en"] {
             font-weight: bold;
         }
+
+        #calltoaction:hover {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -233,7 +237,7 @@
                 <span></span>
                 <div id="homeDiv">
                     <h1 id="homeHeading">{% trans "De quel talent avez-vous besoin ?" %}</h1>
-                    <hr>
+                    <a id="calltoaction"href="#talents" class="fa fa-chevron-circle-down fa-5x"></a>
                 </div>
             </li>
             <li>
