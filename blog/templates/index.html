@@ -206,9 +206,7 @@
                     <li>
                         <a class="page-scroll" href="#contact">{% trans "Contact" %}</a>
                     </li>
-                    <li>
-                        <a class="page-scroll btn btn-default" href="#talents">{% trans "Votez" %}</a>
-                    </li>
+                    <a class="page-scroll navbar-btn btn btn-primary" href="#talents">{% trans "Votez" %}</a>
                     <li>
                         <form action="{% url 'set_language' %}" id="select-lang" method="post" onChange="this.submit();">{% csrf_token %}
                             {% get_current_language as LANGUAGE_CODE %}
@@ -241,7 +239,7 @@
                 <span></span>
                 <div id="homeDiv">
                     <h1 id="homeHeading">{% trans "De quel talent avez-vous besoin ?" %}</h1>
-                    <a id="calltoaction"href="#talents" class="fa fa-chevron-circle-down fa-5x"></a>
+                    <a id="calltoaction"href="#talents" class="page-scroll fa fa-chevron-circle-down fa-5x"></a>
                 </div>
             </li>
             <li>
@@ -266,6 +264,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>{% blocktrans %}En attendant le lancement de notre plateforme, partagez vos besoins et vos talents avec nous !{% endblocktrans %}</h2>
+                <p>{% blocktrans %} (toutes personnes participants au sondage sera invité à utiliser gratuitement le service en version beta){% endblocktrans %}</p>
                 <form method="POST" class="col-lg-6 post-form">
                     <h3>{% blocktrans %}Ce service m'intéresse{% endblocktrans %}</h3>
                     {{ asker_form.as_p }}
