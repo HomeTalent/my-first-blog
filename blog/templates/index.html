@@ -207,6 +207,9 @@
                         <a class="page-scroll" href="#contact">{% trans "Contact" %}</a>
                     </li>
                     <li>
+                        <a class="page-scroll btn btn-default" href="#talents">{% trans "Votez" %}</a>
+                    </li>
+                    <li>
                         <form action="{% url 'set_language' %}" id="select-lang" method="post" onChange="this.submit();">{% csrf_token %}
                             {% get_current_language as LANGUAGE_CODE %}
                             <input name="next" type="hidden" value="{{ redirect_to }}" />
@@ -276,7 +279,7 @@
                     {% csrf_token %}
                     <button type="submit" name="offerbutton" class="save btn btn-primary">{% blocktrans %}JE PROPOSE MES SERVICES !{% endblocktrans %}</button>
                 </form>
-                
+                <p>{% blocktrans %}* Nous vous garantissons que nous n'utiliserons pas votre adresse e-mail à des fins commerciales{% endblocktrans %}</p>
             </div>
         </div>
     </aside>
